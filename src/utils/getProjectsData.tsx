@@ -41,10 +41,8 @@ export async function fetchProjects(): Promise<ProjectData[]> {
                 },
             }
         );
-        console.log("CODIGO" + process.env.NEXT_PUBLIC_BASE_URL);
 
         if (!response.ok) {
-            console.log("CODIGO " + process.env.NEXT_PUBLIC_BASE_URL);
             throw new Error('Failed to fetch projects');
         }
 
