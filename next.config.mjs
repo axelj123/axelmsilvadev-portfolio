@@ -9,7 +9,6 @@ const nextConfig = {
   images: {
     domains: ['example.com', 'avatars.githubusercontent.com','github.com','user-images.githubusercontent.com','i.giphy.com'], 
     formats: ['image/avif', 'image/webp'],
-    unoptimized: true,
   },
 
   reactStrictMode: true,
