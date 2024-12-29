@@ -37,7 +37,7 @@ export async function fetchProjects(): Promise<ProjectData[]> {
                     'X-GitHub-Api-Version': '2022-11-28'
                 },
                 next: {
-
+                    revalidate: 3600,
                 },
             }
         );
@@ -102,7 +102,7 @@ export async function getProjects(slug: string): Promise<ProjectData> {
                     'X-GitHub-Api-Version': '2022-11-28'
                 },
                 next: {
-
+                    revalidate: 3600
                 }
             }
         );
