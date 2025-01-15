@@ -20,25 +20,24 @@
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --primary: 200 100% 50%;
-    background-color: rgb(0 0 0); /* Negro puro */
-    color: rgb(255 255 255); /* Blanco puro */
+    background-color: rgb(0 0 0);
+    color: rgb(255 255 255);
   }
 }
 ::-webkit-scrollbar {
   width: 12px;
-  /* Ancho de la barra de desplazamiento */
   height: 12px;
-  /* Alto de la barra de desplazamiento horizontal */
+  
 }
 
 ::-webkit-scrollbar-track {
   background: #313131;
-  /* Color del track (fondo) */
+ 
 }
 
 ::-webkit-scrollbar-thumb {
   background: #5a5959;
-  /* Color del pulgar */
+
 }
 @layer base {
   body {
