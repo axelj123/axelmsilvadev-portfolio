@@ -1,0 +1,24 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://axelmsilvadev.vercel.app/sitemap.xml
+
+# Common paths to disallow
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Optional: Block AI bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Block archive pages if you have them
+Disallow: /archive/
+
+# Block preview pages from Vercel
+Disallow: /_vercel/

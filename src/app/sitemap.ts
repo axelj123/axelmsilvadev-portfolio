@@ -40,7 +40,7 @@ async function fetchBlogPosts() {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://axelmsilvadev.vercel.app'
 
-  // Rutas principales
+
   const mainRoutes = [
     {
       url: baseUrl,
@@ -63,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   try {
-    // Obtener proyectos
+
     const projects = await fetchProjects()
     const projectRoutes = projects.map(project => ({
       url: `${baseUrl}/projects/${project.slug}`,
@@ -72,7 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }))
 
-    // Obtener posts del blog
+
     const blogPosts = await fetchBlogPosts()
     const blogRoutes = blogPosts.map(post => ({
       url: `${baseUrl}/blog/${post.slug}`,
@@ -84,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [...mainRoutes, ...projectRoutes, ...blogRoutes]
   } catch (error) {
     console.error('Error generating sitemap:', error)
-    // En caso de error, devolver al menos las rutas principales
+
     return mainRoutes
   }
 }
