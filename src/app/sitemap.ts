@@ -12,7 +12,7 @@ async function fetchBlogPosts() {
           'Accept': 'application/vnd.github+json',
           'Authorization': `Bearer ${process.env.NEXT_PUBLIC_BASE_URL}`,
           'X-GitHub-Api-Version': '2022-11-28'
-        },
+        }, 
         next: {
           revalidate: 3600,
         },
