@@ -16,7 +16,7 @@ async function Project() {
       </div>
 
       <ProjectList initialProjects={projects} />
-
+ 
     </div>
   );
 }
